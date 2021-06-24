@@ -11,9 +11,12 @@ import { TableModule } from 'smart-webcomponents-angular/table';
 
 import { ButtonModule } from 'smart-webcomponents-angular/button';
 import { TooltipModule } from 'smart-webcomponents-angular/tooltip';
+import { HtmlelementsModule} from './htmlelements/htmlelements.module';
+import { RootComponent } from './root/root.component'
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RootComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import { TooltipModule } from 'smart-webcomponents-angular/tooltip';
     MatSliderModule,
     TableModule,
     ButtonModule,
-    TooltipModule
+    TooltipModule,
+    HtmlelementsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
