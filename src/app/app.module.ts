@@ -13,12 +13,16 @@ import { ButtonModule } from 'smart-webcomponents-angular/button';
 import { TooltipModule } from 'smart-webcomponents-angular/tooltip';
 import { HtmlelementsModule} from './htmlelements/htmlelements.module';
 import { RootComponent } from './root/root.component';
-import { UsersComponent } from './users/users.component'
+import { UsersComponent } from './users/users.component';
+import { UserComponent } from './user/user.component';
+import { AdminComponent } from './admin/admin.component'
 @NgModule({
   declarations: [
     AppComponent,
     RootComponent,
-    UsersComponent
+    UsersComponent,
+    UserComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

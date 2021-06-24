@@ -1,12 +1,1 @@
-
-<h1>title:{{title}}</h1>
-<div class="user" *ngFor="let item of dataset" >
-  <app-users (parentFunction)="parentFunction($event)" [hero]="item"></app-users>
-</div>
-
-<h1>{{name|uppercase}}</h1>
-<h1>{{name|titlecase}}</h1>
-<h1>{{name|lowercase}}</h1>
-<h2>Today :{{date|date:'yy-mm-dd'}}</h2>
-<h3>{{str|slice:0:5}}</h3>
-<h4>{{mony|currency:"PKR"}}</h4>
+<router-outlet></router-outlet>
