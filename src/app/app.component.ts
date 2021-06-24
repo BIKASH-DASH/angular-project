@@ -39,6 +39,10 @@ const ALERTS: Alert[] = [{
 })
 export class AppComponent {
   title = 'angular-project';
+  name = 'biaksh dash';
+  date = Date.now();
+  str  ="hello angular";
+  mony = 1000;
   alerts : Alert[]=[];
   dataset  =  [
   {
