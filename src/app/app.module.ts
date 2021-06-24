@@ -13,24 +13,20 @@ import { ButtonModule } from 'smart-webcomponents-angular/button';
 import { TooltipModule } from 'smart-webcomponents-angular/tooltip';
 import { HtmlelementsModule} from './htmlelements/htmlelements.module';
 import { RootComponent } from './root/root.component';
-import { UsersComponent } from './users/users.component';
 import { UserComponent } from './user/user.component';
 import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CustomStyleDirective } from './custom-style.directive';
 import {HttpClientModule} from '@angular/common/http';
-import { LoginComponent } from './users/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RootComponent,
-    UsersComponent,
     UserComponent,
     AdminComponent,
     PageNotFoundComponent,
     CustomStyleDirective,
-    LoginComponent,
   ],
   imports: [
     BrowserModule,
