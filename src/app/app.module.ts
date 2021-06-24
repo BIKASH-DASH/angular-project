@@ -7,6 +7,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from "@angular/material/button";
 import { MatSliderModule } from '@angular/material/slider'
+import { TableModule } from 'smart-webcomponents-angular/table';
+
+import { ButtonModule } from 'smart-webcomponents-angular/button';
+import { TooltipModule } from 'smart-webcomponents-angular/tooltip';
 @NgModule({
   declarations: [
     AppComponent
@@ -17,7 +21,10 @@ import { MatSliderModule } from '@angular/material/slider'
     NgbModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatSliderModule
+    MatSliderModule,
+    TableModule,
+    ButtonModule,
+    TooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
