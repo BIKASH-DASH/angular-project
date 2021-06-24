@@ -1,4 +1,16 @@
-<p>user works!</p>
-<a routerLink="user">User</a>
-<a routerLink="admin/">Admin</a>
-<a routerLink="about">About</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">name</th>
+            <th scope="col">status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of data; let i=index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{item.title}}</td>
+        <td>{{item.completed}}</td>
+        </tr>
+    </tbody>
+</table>

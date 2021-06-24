@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {UserService} from './user.service'
 
 interface Alert {
   type: string;
@@ -42,14 +41,15 @@ export class AppComponent {
   title = 'angular-project';
   name = 'biaksh dash';
   date = Date.now();
-  str  ="hello angular";
+  str = "hello angular";
   mony = 1000;
-  alerts : Alert[]=[];
-  dataset  =  [
-  {
-    name:"biaksh",
-    lastname:"dash1"
-  },
+  data = {};
+  alerts: Alert[] = [];
+  dataset = [
+    {
+      name: "biaksh",
+      lastname: "dash1"
+    },
     {
       name: "raja",
       lastname: "dash2"
@@ -58,17 +58,16 @@ export class AppComponent {
       name: "babu",
       lastname: "dash3"
     },
-]
+  ]
 
-  parentFunction(data:any){
+  parentFunction(data: any) {
     console.log(data);
-    this.title = data.name
-    
+    this.title = data.name;
+
   }
 
-  constructor(private user: UserService) {
+  constructor() {
     this.reset();
-    console.log(user.getData().name);
     
   }
 
