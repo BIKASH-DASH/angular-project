@@ -16,7 +16,9 @@ import { RootComponent } from './root/root.component';
 import { UsersComponent } from './users/users.component';
 import { UserComponent } from './user/user.component';
 import { AdminComponent } from './admin/admin.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CustomStyleDirective } from './custom-style.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     UsersComponent,
     UserComponent,
     AdminComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CustomStyleDirective
   ],
   imports: [
     BrowserModule,
