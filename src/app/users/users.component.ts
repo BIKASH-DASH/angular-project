@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-users',
@@ -7,6 +7,7 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class UsersComponent implements OnInit {
   @Input() hero:any ;
+  @Output() parentFunction:EventEmitter<any> = new EventEmitter();
   data = [
   {
     name:"bikash",
@@ -20,6 +21,12 @@ export class UsersComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.parentFunction.emit("vikash")
+  }
+
+  SendData(arg:any): void {
+    this.parentFunction.emit(arg)
+    
   }
 
 }

@@ -55,6 +55,12 @@ export class AppComponent {
     },
 ]
 
+  parentFunction(data:any){
+    console.log(data);
+    this.title = data.name
+    
+  }
+
   constructor() {
     this.reset();
   }
