@@ -6,6 +6,7 @@ import {RootComponent} from './root/root.component'
 import { AppComponent } from "./app.component";
 import { UserComponent} from './user/user.component'
 import {AdminComponent} from './admin/admin.component'
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 const routes: Routes = [
   {
     path:"user",
@@ -24,8 +25,8 @@ const routes: Routes = [
     component: RootComponent
   },
   {
-    path: 'smart',
-    component: QuerybuilderComponent
+    path: '**',
+    component: PageNotFoundComponent
   },
   
 ];
