@@ -12,11 +12,13 @@ import { TableModule } from 'smart-webcomponents-angular/table';
 import { ButtonModule } from 'smart-webcomponents-angular/button';
 import { TooltipModule } from 'smart-webcomponents-angular/tooltip';
 import { HtmlelementsModule} from './htmlelements/htmlelements.module';
-import { RootComponent } from './root/root.component'
+import { RootComponent } from './root/root.component';
+import { UsersComponent } from './users/users.component'
 @NgModule({
   declarations: [
     AppComponent,
-    RootComponent
+    RootComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

@@ -40,6 +40,20 @@ const ALERTS: Alert[] = [{
 export class AppComponent {
   title = 'angular-project';
   alerts : Alert[]=[];
+  dataset  =  [
+  {
+    name:"biaksh",
+    lastname:"dash1"
+  },
+    {
+      name: "raja",
+      lastname: "dash2"
+    },
+    {
+      name: "babu",
+      lastname: "dash3"
+    },
+]
 
   constructor() {
     this.reset();
