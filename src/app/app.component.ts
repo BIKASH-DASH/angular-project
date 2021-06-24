@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {UserService} from './user.service'
 
 interface Alert {
   type: string;
@@ -65,8 +66,10 @@ export class AppComponent {
     
   }
 
-  constructor() {
+  constructor(private user: UserService) {
     this.reset();
+    console.log(user.getData().name);
+    
   }
 
   close(alert: Alert) {
