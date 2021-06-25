@@ -6,16 +6,16 @@ import { ListComponent } from './users/list/list.component';
 
 const routes: Routes = [  
   {
-    path: '**',
-    component: PageNotFoundComponent
-  },
-  {
     path: 'users',
     component: LoginsComponent
   },
   {
     path: 'list',
     component: ListComponent
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
   },
   
 ];
