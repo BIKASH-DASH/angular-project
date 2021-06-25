@@ -11,20 +11,14 @@ import { TableModule } from 'smart-webcomponents-angular/table';
 
 import { ButtonModule } from 'smart-webcomponents-angular/button';
 import { TooltipModule } from 'smart-webcomponents-angular/tooltip';
-import { HtmlelementsModule} from './htmlelements/htmlelements.module';
-import { RootComponent } from './root/root.component';
-import { UserComponent } from './user/user.component';
-import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CustomStyleDirective } from './custom-style.directive';
 import {HttpClientModule} from '@angular/common/http';
+import {UsersModule} from './users/users.module'
 
 @NgModule({
   declarations: [
     AppComponent,
-    RootComponent,
-    UserComponent,
-    AdminComponent,
     PageNotFoundComponent,
     CustomStyleDirective,
   ],
@@ -38,8 +32,8 @@ import {HttpClientModule} from '@angular/common/http';
     TableModule,
     ButtonModule,
     TooltipModule,
-    HtmlelementsModule,
-    HttpClientModule
+    HttpClientModule,
+    UsersModule
   ],
   providers: [],
   bootstrap: [AppComponent]

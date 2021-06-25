@@ -1,32 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {HtmlelementsModule} from './htmlelements/htmlelements.module'
-import { QuerybuilderComponent } from './htmlelements/querybuilder/querybuilder.component';
-import {RootComponent} from './root/root.component'
-import { AppComponent } from "./app.component";
-import { UserComponent} from './user/user.component'
-import {AdminComponent} from './admin/admin.component'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
-const routes: Routes = [
-  {
-    path:"user",
-    component: UserComponent
-  },
-  {
-    path: "admin",
-    component: AdminComponent
-  },
-  {
-    path: '',
-    component: AppComponent
-  },
-    {
-    path: 'login',
-    component: RootComponent
-  },
+import {LoginsComponent} from './users/logins/logins.component';
+import { ListComponent } from './users/list/list.component';
+
+const routes: Routes = [  
   {
     path: '**',
     component: PageNotFoundComponent
+  },
+  {
+    path: 'users',
+    component: LoginsComponent
+  },
+  {
+    path: 'list',
+    component: ListComponent
   },
   
 ];
