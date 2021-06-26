@@ -14,8 +14,8 @@ import { TooltipModule } from 'smart-webcomponents-angular/tooltip';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CustomStyleDirective } from './custom-style.directive';
 import {HttpClientModule} from '@angular/common/http';
-import {UsersModule} from './users/users.module';
-import { UsersRoutingModule } from './users/users-routing.module'
+import { AdminModule } from "./admin/admin.module";
+import {UserModule} from './user/user.module'
 
 @NgModule({
   declarations: [
@@ -34,8 +34,8 @@ import { UsersRoutingModule } from './users/users-routing.module'
     ButtonModule,
     TooltipModule,
     HttpClientModule,
-    UsersModule,
-    UsersRoutingModule
+    AdminModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
