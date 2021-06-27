@@ -19,6 +19,11 @@ export class AppComponent {
 
   }
 
+  OnSubmitForm (data:any){
+    console.log(data);
+    
+  }
+
   async loadAdmin(){
     this.vcf.clear();
     const { AdminlistComponent} = await import('./adminlist/adminlist.component');

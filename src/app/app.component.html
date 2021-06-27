@@ -1,3 +1,9 @@
 <button (click)="loadAdmin()" mat-button>Admin Button </button>
 
 <button (click)="loadUser()" mat-button>User Button </button>
+
+<form #userForm="ngForm" (ngSubmit)="OnSubmitForm(userForm.value)">
+    <input name="userName" ngModel matInput placeholder="username" value="">
+    <input name="userPassword" ngModel matInput placeholder="password" value="">
+    <button type="submit">login</button>
+</form>
