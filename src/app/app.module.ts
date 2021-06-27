@@ -15,13 +15,17 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { CustomStyleDirective } from './custom-style.directive';
 import {HttpClientModule} from '@angular/common/http';
 import { AdminModule } from "./admin/admin.module";
-import {UserModule} from './user/user.module'
+import {UserModule} from './user/user.module';
+import { AdminlistComponent } from './adminlist/adminlist.component';
+import { UserlistComponent } from './userlist/userlist.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
     CustomStyleDirective,
+    AdminlistComponent,
+    UserlistComponent,
   ],
   imports: [
     BrowserModule,

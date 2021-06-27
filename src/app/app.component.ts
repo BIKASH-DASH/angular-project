@@ -1,36 +1,8 @@
-import { Component } from '@angular/core';
+import { Component,ViewContainerRef,ComponentFactoryResolver } from '@angular/core';
 
-interface Alert {
-  type: string;
-  message: string;
-}
 
-const ALERTS: Alert[] = [{
-  type: 'success',
-  message: 'This is an success alert',
-}, {
-  type: 'info',
-  message: 'This is an info alert',
-}, {
-  type: 'warning',
-  message: 'This is a warning alert',
-}, {
-  type: 'danger',
-  message: 'This is a danger alert',
-}, {
-  type: 'primary',
-  message: 'This is a primary alert',
-}, {
-  type: 'secondary',
-  message: 'This is a secondary alert',
-}, {
-  type: 'light',
-  message: 'This is a light alert',
-}, {
-  type: 'dark',
-  message: 'This is a dark alert',
-}
-];
+
+
 
 @Component({
   selector: 'app-root',
@@ -38,44 +10,29 @@ const ALERTS: Alert[] = [{
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-project';
-  name = 'biaksh dash';
-  date = Date.now();
-  str = "hello angular";
-  mony = 1000;
-  data = {};
-  alerts: Alert[] = [];
-  dataset = [
-    {
-      name: "biaksh",
-      lastname: "dash1"
-    },
-    {
-      name: "raja",
-      lastname: "dash2"
-    },
-    {
-      name: "babu",
-      lastname: "dash3"
-    },
-  ]
 
-  parentFunction(data: any) {
-    console.log(data);
-    this.title = data.name;
+  title = 'blog'
+  constructor(
+    private vcf: ViewContainerRef,
+    private cfr: ComponentFactoryResolver
+  ) {
 
   }
 
-  constructor() {
-    this.reset();
-    
+  async loadAdmin(){
+    this.vcf.clear();
+    const { AdminlistComponent} = await import('./adminlist/adminlist.component');
+    this.vcf.createComponent(
+      this.cfr.resolveComponentFactory(AdminlistComponent)
+    )
   }
 
-  close(alert: Alert) {
-    this.alerts.splice(this.alerts.indexOf(alert), 1);
+  async loadUser(){
+    this.vcf.clear();
+    const { UserlistComponent}  = await import('./userlist/userlist.component');
+    this.vcf.createComponent(
+      this.cfr.resolveComponentFactory(UserlistComponent)
+    )
   }
 
-  reset() {
-    this.alerts = Array.from(ALERTS);
-  }
 }
