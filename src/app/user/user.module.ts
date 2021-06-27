@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { UserRoutingModule } from './user-routing.module';
 import { ListComponent } from './list/list.component';
 import { LoginComponent } from './login/login.component';
+import { UserlistComponent } from './userlist/userlist.component';
 
 
 @NgModule({
   declarations: [
     ListComponent,
-    LoginComponent
+    LoginComponent,
+    UserlistComponent
   ],
   imports: [
     CommonModule,
